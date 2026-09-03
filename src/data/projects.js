@@ -32,6 +32,22 @@ const projects = [
     github: "https://github.com/Adarshaachary/Weather-App",
     demo: "https://adarshaachary.github.io/Weather-App/",
   },
+  {
+    id: 4,
+    title: "SmartWish",
+    description:
+      "Developed a full-stack web application for scheduling automated birthday, anniversary, and special occasion wishes with custom dates, times, and yearly recurring events.",
+    tech: [
+      "React",
+      "TypeScript",
+      "Node.js",
+      "Express.js",
+      "MySQL",
+      "Nodemailer",
+      "node-cron",
+    ],
+    github: "https://github.com/Adarshaachary/portfolio",
+  },
 ];
 
 export default projects;

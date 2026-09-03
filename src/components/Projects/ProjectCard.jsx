@@ -41,15 +41,17 @@ function ProjectCard({
           GitHub
         </a>
 
-        <a
-          href={demo}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center gap-2 hover:text-cyan-400 transition"
-        >
-          <FaExternalLinkAlt />
-          Live Demo
-        </a>
+        {demo && (
+          <a
+            href={demo}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 hover:text-cyan-400 transition"
+          >
+            <FaExternalLinkAlt />
+            Live Demo
+          </a>
+        )}
 
       </div>
 
