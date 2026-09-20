@@ -33,9 +33,9 @@ const educationData = [
 const Education = () => {
   return (
     <section
-      id="education"
-      className="py-20 px-6 md:px-12 lg:px-20"
-    >
+  id="education"
+  className="py-20 px-6 md:px-12 lg:px-20"
+>
       <div className="max-w-5xl mx-auto">
 
         {/* Heading */}

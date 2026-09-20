@@ -1,3 +1,4 @@
+
 import {
   FaHtml5,
   FaCss3Alt,
@@ -8,12 +9,15 @@ import {
   FaGithub,
   FaPython,
   FaCode,
+  FaNodeJs,
 } from "react-icons/fa";
 
 import {
   SiTailwindcss,
   SiVite,
   SiMysql,
+  SiTypescript,
+  SiExpress,
 } from "react-icons/si";
 
 const skills = [
@@ -43,54 +47,84 @@ const skills = [
   },
   {
     id: 5,
+    name: "TypeScript",
+    icon: SiTypescript,
+    color: "text-blue-500",
+  },
+  {
+    id: 6,
     name: "Tailwind CSS",
     icon: SiTailwindcss,
     color: "text-cyan-500",
   },
   {
-    id: 6,
+    id: 7,
     name: "Bootstrap",
     icon: FaBootstrap,
     color: "text-purple-500",
   },
   {
-    id: 7,
+    id: 8,
+    name: "Node.js",
+    icon: FaNodeJs,
+    color: "text-green-500",
+  },
+  {
+    id: 9,
+    name: "Express.js",
+    icon: SiExpress,
+    color: "text-white",
+  },
+  {
+    id: 10,
+    name: "REST APIs",
+    icon: FaCode,
+    color: "text-green-400",
+  },
+  {
+    id: 11,
     name: "Git",
     icon: FaGitAlt,
     color: "text-orange-600",
   },
   {
-    id: 8,
+    id: 12,
     name: "GitHub",
     icon: FaGithub,
     color: "text-white",
   },
   {
-    id: 9,
+    id: 13,
     name: "Python",
     icon: FaPython,
     color: "text-yellow-500",
   },
   {
-    id: 10,
+    id: 14,
     name: "MySQL",
     icon: SiMysql,
     color: "text-blue-400",
   },
   {
-    id: 11,
+    id: 15,
+    name: "SQL",
+    icon: FaCode,
+    color: "text-blue-300",
+  },
+  {
+    id: 16,
     name: "Vite",
     icon: SiVite,
     color: "text-violet-400",
   },
   {
-    id: 12,
+    id: 17,
     name: "C",
     icon: FaCode,
     color: "text-green-500",
   },
   {
-    id: 13,
+    id: 18,
     name: "C++",
     icon: FaCode,
     color: "text-blue-500",
