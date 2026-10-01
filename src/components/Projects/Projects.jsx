@@ -4,13 +4,17 @@ import ProjectCard from "./ProjectCard";
 function Projects() {
   return (
     <section
-  id="projects"
-  className="py-20 px-6 md:px-12 lg:px-20"
->
+      id="projects"
+      className="py-20 px-6 md:px-12 lg:px-20"
+    >
       <div className="max-w-7xl mx-auto px-6">
 
-        <div className="text-center mb-16">
-
+        {/* Section Heading */}
+        <div
+          data-scroll-animation="fade-up"
+          style={{ transitionDelay: "0.1s" }}
+          className="text-center mb-16"
+        >
           <p className="text-cyan-400 uppercase tracking-widest text-sm">
             Projects
           </p>
@@ -22,20 +26,27 @@ function Projects() {
           <p className="text-gray-400 mt-5">
             Some projects I've built while learning web development.
           </p>
-
         </div>
 
+        {/* Project Cards */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-          {projects.map((project) => (
-            <ProjectCard
+          {projects.map((project, index) => (
+            <div
               key={project.id}
-              title={project.title}
-              description={project.description}
-              tech={project.tech}
-              github={project.github}
-              demo={project.demo}
-            />
+              data-scroll-animation="scale"
+              style={{
+                transitionDelay: `${0.25 + index * 0.15}s`,
+              }}
+            >
+              <ProjectCard
+                title={project.title}
+                description={project.description}
+                tech={project.tech}
+                github={project.github}
+                demo={project.demo}
+              />
+            </div>
           ))}
 
         </div>

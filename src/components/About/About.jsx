@@ -7,7 +7,11 @@ function About() {
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Section Heading */}
-        <div className="text-center mb-16">
+        <div
+          data-scroll-animation="fade-up"
+          style={{ transitionDelay: "0.1s" }}
+          className="text-center mb-16"
+        >
           <p className="text-cyan-400 uppercase tracking-widest text-sm">
             About Me
           </p>
@@ -26,14 +30,38 @@ function About() {
         <div className="grid md:grid-cols-2 gap-16 items-center">
 
           {/* Left Side */}
-          <div className="flex justify-center">
-            <div className="w-72 h-72 rounded-3xl bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center text-8xl font-bold shadow-xl">
+          <div
+            data-scroll-animation="fade-left"
+            style={{ transitionDelay: "0.25s" }}
+            className="flex justify-center"
+          >
+            <div
+              className="
+                w-72 h-72
+                rounded-3xl
+                bg-gradient-to-br
+                from-cyan-500
+                to-blue-600
+                flex items-center justify-center
+                text-8xl
+                font-bold
+                shadow-xl
+                transition-all
+                duration-500
+                hover:scale-105
+                hover:-rotate-1
+                hover:shadow-[0_15px_50px_rgba(34,211,238,0.25)]
+              "
+            >
               AA
             </div>
           </div>
 
           {/* Right Side */}
-          <div>
+          <div
+            data-scroll-animation="fade-right"
+            style={{ transitionDelay: "0.35s" }}
+          >
             <h3 className="text-3xl font-bold mb-6">
               Frontend & Full-Stack Developer
             </h3>
@@ -65,7 +93,21 @@ function About() {
             <div className="grid grid-cols-2 gap-5">
 
               {/* Projects */}
-              <div className="bg-gray-900 p-6 rounded-xl border border-gray-800 hover:border-cyan-500 transition">
+              <div
+                data-scroll-animation="fade-up"
+                style={{ transitionDelay: "0.5s" }}
+                className="
+                  bg-gray-900
+                  p-6
+                  rounded-xl
+                  border border-gray-800
+                  hover:border-cyan-500
+                  hover:-translate-y-2
+                  hover:shadow-[0_10px_30px_rgba(34,211,238,0.10)]
+                  transition-all
+                  duration-300
+                "
+              >
                 <h4 className="text-cyan-400 text-2xl font-bold">
                   3+
                 </h4>
@@ -76,7 +118,21 @@ function About() {
               </div>
 
               {/* Graduation */}
-              <div className="bg-gray-900 p-6 rounded-xl border border-gray-800 hover:border-cyan-500 transition">
+              <div
+                data-scroll-animation="fade-up"
+                style={{ transitionDelay: "0.65s" }}
+                className="
+                  bg-gray-900
+                  p-6
+                  rounded-xl
+                  border border-gray-800
+                  hover:border-cyan-500
+                  hover:-translate-y-2
+                  hover:shadow-[0_10px_30px_rgba(34,211,238,0.10)]
+                  transition-all
+                  duration-300
+                "
+              >
                 <h4 className="text-cyan-400 text-2xl font-bold">
                   2027
                 </h4>
@@ -87,7 +143,21 @@ function About() {
               </div>
 
               {/* Development Focus */}
-              <div className="bg-gray-900 p-6 rounded-xl border border-gray-800 hover:border-cyan-500 transition">
+              <div
+                data-scroll-animation="fade-up"
+                style={{ transitionDelay: "0.8s" }}
+                className="
+                  bg-gray-900
+                  p-6
+                  rounded-xl
+                  border border-gray-800
+                  hover:border-cyan-500
+                  hover:-translate-y-2
+                  hover:shadow-[0_10px_30px_rgba(34,211,238,0.10)]
+                  transition-all
+                  duration-300
+                "
+              >
                 <h4 className="text-cyan-400 text-2xl font-bold">
                   Full-Stack
                 </h4>
@@ -98,7 +168,21 @@ function About() {
               </div>
 
               {/* Internship */}
-              <div className="bg-gray-900 p-6 rounded-xl border border-gray-800 hover:border-cyan-500 transition">
+              <div
+                data-scroll-animation="fade-up"
+                style={{ transitionDelay: "0.95s" }}
+                className="
+                  bg-gray-900
+                  p-6
+                  rounded-xl
+                  border border-gray-800
+                  hover:border-cyan-500
+                  hover:-translate-y-2
+                  hover:shadow-[0_10px_30px_rgba(34,211,238,0.10)]
+                  transition-all
+                  duration-300
+                "
+              >
                 <h4 className="text-cyan-400 text-2xl font-bold">
                   Open
                 </h4>

@@ -33,78 +33,107 @@ const educationData = [
 const Education = () => {
   return (
     <section
-  id="education"
-  className="py-20 px-6 md:px-12 lg:px-20"
->
+      id="education"
+      className="py-20 px-6 md:px-12 lg:px-20"
+    >
       <div className="max-w-5xl mx-auto">
 
         {/* Heading */}
-        <h2 className="text-4xl font-bold text-center mb-14">
-          My{" "}
-          <span className="text-blue-500">
-            Education
-          </span>
-        </h2>
-
+        <div
+          data-scroll-animation="fade-up"
+          style={{ transitionDelay: "0.1s" }}
+          className="text-center"
+        >
+          <h2 className="text-4xl font-bold mb-14">
+            My{" "}
+            <span className="text-blue-500">
+              Education
+            </span>
+          </h2>
+        </div>
 
         {/* Timeline */}
         <div className="relative">
 
           {/* Vertical Line */}
-          <div className="absolute left-4 top-0 h-full w-1 bg-blue-500"></div>
-
+          <div
+            data-scroll-animation="fade-up"
+            style={{ transitionDelay: "0.25s" }}
+            className="
+              absolute
+              left-4
+              top-0
+              h-full
+              w-1
+              bg-blue-500
+            "
+          ></div>
 
           {educationData.map((edu, index) => (
 
             <div
               key={index}
-              className="relative pl-12 mb-10"
+              data-scroll-animation={
+                index % 2 === 0 ? "fade-left" : "fade-right"
+              }
+              style={{
+                transitionDelay: `${0.35 + index * 0.2}s`,
+              }}
+              className="
+                relative
+                pl-12
+                mb-10
+              "
             >
 
               {/* Timeline Dot */}
               <div
                 className="
-                absolute 
-                left-0 
-                top-6 
-                w-8 
-                h-8 
-                rounded-full 
-                bg-blue-500 
-                border-4 
-                border-gray-900"
+                  absolute
+                  left-0
+                  top-6
+                  w-8
+                  h-8
+                  rounded-full
+                  bg-blue-500
+                  border-4
+                  border-gray-900
+                  z-10
+                  transition-all
+                  duration-300
+                  hover:scale-125
+                  hover:shadow-[0_0_20px_rgba(59,130,246,0.5)]
+                "
               ></div>
-
 
               {/* Card */}
               <div
                 className="
-                bg-white/5
-                backdrop-blur-md
-                border
-                border-white/10
-                rounded-2xl
-                p-6
-                transition
-                duration-300
-                hover:-translate-y-2
-                hover:border-blue-500"
+                  bg-white/5
+                  backdrop-blur-md
+                  border
+                  border-white/10
+                  rounded-2xl
+                  p-6
+                  transition-all
+                  duration-300
+                  hover:-translate-y-2
+                  hover:border-blue-500
+                  hover:shadow-[0_12px_35px_rgba(59,130,246,0.12)]
+                "
               >
 
                 <h3 className="text-2xl font-semibold">
                   {edu.degree}
                 </h3>
 
-
                 <h4 className="text-blue-400 mt-2">
                   {edu.branch}
                 </h4>
 
-
                 <p className="mt-3 text-lg">
                   {edu.institution}
                 </p>
-
 
                 <div className="flex flex-wrap gap-5 mt-4 text-gray-300">
 
@@ -118,11 +147,9 @@ const Education = () => {
 
                 </div>
 
-
                 <p className="mt-4 text-gray-400 leading-relaxed">
                   {edu.description}
                 </p>
-
 
               </div>
 

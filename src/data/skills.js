@@ -1,4 +1,3 @@
-
 import {
   FaHtml5,
   FaCss3Alt,
@@ -18,6 +17,8 @@ import {
   SiMysql,
   SiTypescript,
   SiExpress,
+  SiMongodb,
+  SiPrisma,
 } from "react-icons/si";
 
 const skills = [
@@ -83,48 +84,72 @@ const skills = [
   },
   {
     id: 11,
+    name: "API Integration",
+    icon: FaCode,
+    color: "text-cyan-400",
+  },
+  {
+    id: 12,
+    name: "AI Integration",
+    icon: FaCode,
+    color: "text-purple-400",
+  },
+  {
+    id: 13,
+    name: "MongoDB",
+    icon: SiMongodb,
+    color: "text-green-500",
+  },
+  {
+    id: 14,
+    name: "Prisma",
+    icon: SiPrisma,
+    color: "text-cyan-300",
+  },
+  {
+    id: 15,
     name: "Git",
     icon: FaGitAlt,
     color: "text-orange-600",
   },
   {
-    id: 12,
+    id: 16,
     name: "GitHub",
     icon: FaGithub,
     color: "text-white",
   },
   {
-    id: 13,
+    id: 17,
     name: "Python",
     icon: FaPython,
     color: "text-yellow-500",
   },
   {
-    id: 14,
+    id: 18,
     name: "MySQL",
     icon: SiMysql,
     color: "text-blue-400",
   },
   {
-    id: 15,
+    id: 19,
     name: "SQL",
     icon: FaCode,
     color: "text-blue-300",
   },
   {
-    id: 16,
+    id: 20,
     name: "Vite",
     icon: SiVite,
     color: "text-violet-400",
   },
   {
-    id: 17,
+    id: 21,
     name: "C",
     icon: FaCode,
     color: "text-green-500",
   },
   {
-    id: 18,
+    id: 22,
     name: "C++",
     icon: FaCode,
     color: "text-blue-500",

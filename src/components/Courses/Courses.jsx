@@ -4,13 +4,17 @@ import CourseCard from "./CourseCard";
 function Courses() {
   return (
     <section
-  id="courses"
-  className="py-20 px-6 md:px-12 lg:px-20"
->
+      id="courses"
+      className="py-20 px-6 md:px-12 lg:px-20"
+    >
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Section Heading */}
-        <div className="text-center mb-16">
+        <div
+          data-scroll-animation="fade-up"
+          style={{ transitionDelay: "0.1s" }}
+          className="text-center mb-16"
+        >
           <p className="text-cyan-400 uppercase tracking-widest text-sm">
             Courses
           </p>
@@ -27,12 +31,25 @@ function Courses() {
 
         {/* Course Cards */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {courses.map((course) => (
-            <CourseCard
+
+          {courses.map((course, index) => (
+            <div
               key={course.id}
-              {...course}
-            />
+              data-scroll-animation="fade-up"
+              style={{
+                transitionDelay: `${0.25 + index * 0.15}s`,
+              }}
+              className="
+                transition-all
+                duration-300
+              "
+            >
+              <CourseCard
+                {...course}
+              />
+            </div>
           ))}
+
         </div>
 
       </div>

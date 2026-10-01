@@ -1,20 +1,246 @@
 @import "tailwindcss";
 
-
 html {
   scroll-behavior: smooth;
 }
 
-
 body {
   margin: 0;
   padding: 0;
-  background-color: #0f172a;
+  background:
+    radial-gradient(
+      circle at 15% 20%,
+      rgba(34, 211, 238, 0.10),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 85% 30%,
+      rgba(6, 182, 212, 0.08),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 50% 90%,
+      rgba(14, 116, 144, 0.06),
+      transparent 35%
+    ),
+    linear-gradient(
+      135deg,
+      #05070d 0%,
+      #08111f 50%,
+      #05070d 100%
+    );
+
+  background-attachment: fixed;
   color: white;
   font-family: "Inter", sans-serif;
+  min-height: 100vh;
 }
 
+/* Subtle background grid */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+
+  background-image:
+    linear-gradient(
+      rgba(34, 211, 238, 0.025) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(34, 211, 238, 0.025) 1px,
+      transparent 1px
+    );
+
+  background-size: 50px 50px;
+}
+
+/* Soft cyan glow */
+body::after {
+  content: "";
+  position: fixed;
+  width: 420px;
+  height: 420px;
+  top: 5%;
+  right: -180px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: -1;
+
+  background: rgba(34, 211, 238, 0.06);
+  filter: blur(100px);
+}
+
+/* Navbar entrance animation */
+@keyframes navbarDrop {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* General section entrance animations */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 
 * {
   box-sizing: border-box;
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Education timeline animation */
+@keyframes timelineGrow {
+  from {
+    transform: scaleY(0);
+  }
+
+  to {
+    transform: scaleY(1);
+  }
+}
+
+/* Education timeline dot animation */
+@keyframes timelineDot {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+
+/* Scroll-triggered animations */
+
+.scroll-animation-hidden {
+  opacity: 0;
+}
+
+.scroll-animation-visible {
+  opacity: 1;
+}
+
+/* Scroll animation types */
+
+[data-scroll-animation="fade-up"] {
+  opacity: 0;
+  transform: translateY(40px);
+  transition:
+    opacity 0.8s ease-out,
+    transform 0.8s ease-out;
+}
+
+[data-scroll-animation="fade-up"].scroll-animation-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+[data-scroll-animation="fade-left"] {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition:
+    opacity 0.8s ease-out,
+    transform 0.8s ease-out;
+}
+
+[data-scroll-animation="fade-left"].scroll-animation-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+[data-scroll-animation="fade-right"] {
+  opacity: 0;
+  transform: translateX(50px);
+  transition:
+    opacity 0.8s ease-out,
+    transform 0.8s ease-out;
+}
+
+[data-scroll-animation="fade-right"].scroll-animation-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+[data-scroll-animation="scale"] {
+  opacity: 0;
+  transform: scale(0.92);
+  transition:
+    opacity 0.8s ease-out,
+    transform 0.8s ease-out;
+}
+
+[data-scroll-animation="scale"].scroll-animation-visible {
+  opacity: 1;
+  transform: scale(1);
 }

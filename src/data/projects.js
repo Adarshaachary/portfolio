@@ -48,6 +48,23 @@ const projects = [
     ],
     github: "https://github.com/Adarshaachary/portfolio",
   },
+  {
+    id: 5,
+    title: "Havenly - Real Estate Website with AI Chatbot",
+    description:
+      "Developed a full-stack real estate platform with property search, filtering, favorites, visit bookings, interactive maps, and an AI-powered chatbot for natural-language property discovery.",
+    tech: [
+      "React",
+      "JavaScript",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Prisma",
+      "Gemini API",
+      "OpenStreetMap",
+    ],
+    github: "https://github.com/Adarshaachary/havenly-real-estate-ai",
+  },
 ];
 
 export default projects;
